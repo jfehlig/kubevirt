@@ -69,10 +69,8 @@ http_archive(
 # Libvirt dependencies
 http_file(
     name = "libvirt_libs",
-    sha256 = "9ff62eb0ed238882a652444e0feb876a9d7878a45fd026a18f64e7ab98faebf0",
     urls = [
-        "https://copr-be.cloud.fedoraproject.org/results/%40virtmaint-sig/for-kubevirt/fedora-30-x86_64/01034621-libvirt/libvirt-libs-5.0.0-2.fc30.x86_64.rpm",
-        "https://storage.googleapis.com/builddeps/9ff62eb0ed238882a652444e0feb876a9d7878a45fd026a18f64e7ab98faebf0",
+        "https://download.opensuse.org/distribution/leap/15.2/repo/oss/x86_64/libvirt-libs-6.0.0-lp152.2.1.x86_64.rpm",
     ],
 )
 
@@ -87,10 +85,8 @@ http_file(
 
 http_file(
     name = "libvirt_devel",
-    sha256 = "e34ca39bb94786b901a626143527f86cae1b6f1c8d1414165465d89e146a612e",
     urls = [
-        "https://copr-be.cloud.fedoraproject.org/results/%40virtmaint-sig/for-kubevirt/fedora-30-x86_64/01034621-libvirt/libvirt-devel-5.0.0-2.fc30.x86_64.rpm",
-        "https://storage.googleapis.com/builddeps/e34ca39bb94786b901a626143527f86cae1b6f1c8d1414165465d89e146a612e",
+        "https://download.opensuse.org/distribution/leap/15.2/repo/oss/x86_64/libvirt-devel-6.0.0-lp152.2.1.x86_64.rpm",
     ],
 )
 
@@ -342,10 +338,10 @@ container_pull(
 # Pull base image libvirt
 container_pull(
     name = "libvirt",
-    digest = "sha256:cfff1e8729a7466581ba71d953b132beaef28f61b330f52caef6d0184e5f9af0",
-    registry = "index.docker.io",
-    repository = "kubevirt/libvirt",
-    #tag = "tmp.20191126.748bd4d.x86_64",
+    digest = "sha256:11ac3822728157fbf80e26f11469bd93ecd2636c6acecd37c01dfaae69f9ddf6",
+    registry = "localhost:5000",
+    repository = "libvirt",
+    #tag = "latest",
 )
 
 container_pull(
